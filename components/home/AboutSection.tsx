@@ -66,8 +66,8 @@ const AboutSection = () => {
               </h2>
               
               <p className="text-gray-600 text-lg leading-relaxed">
-                Concevoir de manière collaborative des chaînes d'approvisionnement conviviales et répondre aux impératifs inter-unités. Développer avec autorité des ressources compétitives et une synergie 
-                globale. Générer des schémas efficaces et uniques avant l'avenir.
+                Concevoir de manière collaborative des chaînes d`&apos; approvisionnement conviviales et répondre aux impératifs inter-unités. Développer avec autorité des ressources compétitives et une synergie 
+                globale. Générer des schémas efficaces et uniques avant l`&apos;avenir.
               </p>
             </div>
 

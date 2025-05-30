@@ -47,8 +47,8 @@ export default function FooterBanner() {
               <MapPin className="w-6 h-6 text-purple-600" />
             </div>
             <div>
-              <p className="text-purple-300 text-sm font-medium">Visitez l'emplacement:</p>
-              <p className="text-white font-semibold">Abidjan, Côte d'ivoire </p>
+              <p className="text-purple-300 text-sm font-medium">Visitez l&apos emplacement:</p>
+              <p className="text-white font-semibold">Abidjan, Côte d&apos ivoire </p>
             </div>
           </div>
         </div>

@@ -61,8 +61,8 @@ const TeamSection = () => {
   ];
 
   // Generate a professional avatar based on name
-  const generateAvatar = (name, isHighlighted = false) => {
-    const initials = name.split(' ').map(n => n[0]).join('');
+  const generateAvatar = (name:string, isHighlighted = false) => {
+   
     const colors = isHighlighted
       ? ['from-white/20', 'to-white/40', 'text-white']
       : ['from-purple-100', 'to-purple-200', 'text-purple-600'];
@@ -95,7 +95,7 @@ const TeamSection = () => {
 
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
            Rencontrez notre professionnel{' '}
-            <span className="text-purple-600">Membres de l'équipe</span>
+            <span className="text-purple-600">Membres de l&apos équipe</span>
           </h2>
         </div>
 
@@ -105,7 +105,7 @@ const TeamSection = () => {
             <div
               key={member.id}
               className={`${member.bgColor} relative rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group overflow-hidden`}
-              onMouseEnter={() => setHoveredCard(member.id)}
+              onMouseEnter={() => setHoveredCard(null)}
               onMouseLeave={() => setHoveredCard(null)}
             >
               {/* Profile Image/Avatar */}

@@ -14,7 +14,7 @@ export default function ContactSection() {
       content: (
         <>
           Cocody-faya,<br />
-          Côte d'ivoire
+          Côte d`&apos;ivoire
         </>
       ),
     },

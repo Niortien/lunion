@@ -57,7 +57,7 @@ const WhyChooseUsSection = () => {
               </h2>
               
               <p className="text-gray-600 text-lg leading-relaxed">
-                Concevoir de manière collaborative des chaînes d'approvisionnement conviviales et inter-unités est
+                Concevoir de manière collaborative des chaînes d&apos approvisionnement conviviales et inter-unités est
                  impératif. Fabriquer avec autorité des ressources compétitives et holistiques.
               </p>
             </div>

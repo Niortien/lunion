@@ -4,59 +4,60 @@ import { FileCheck, Smile, Users, Award, ArrowUp } from 'lucide-react';
 
 const StatsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+
   const [counts, setCounts] = useState({
     projects: 0,
     clients: 0,
     experts: 0,
-    awards: 0
+    awards: 0,
   });
 
   const sectionRef = useRef(null);
 
-  const stats = [
+  type StatKey = keyof typeof counts;
+
+  const stats: { icon: React.ElementType; count: number; label: string; key: StatKey }[] = [
     {
       icon: FileCheck,
       count: 986,
-      label: "Finished Project",
-      key: "projects"
+      label: "Finished Projects",
+      key: "projects",
     },
     {
       icon: Smile,
       count: 896,
       label: "Happy Clients",
-      key: "clients"
+      key: "clients",
     },
     {
       icon: Users,
       count: 396,
       label: "Skilled Experts",
-      key: "experts"
+      key: "experts",
     },
     {
       icon: Award,
       count: 496,
       label: "Honorable Awards",
-      key: "awards"
-    }
+      key: "awards",
+    },
   ];
 
-  // Animation counter function
-  const animateCounter = (start, end, duration, key) => {
+  const animateCounter = (start: number, end: number, duration: number, key: StatKey) => {
     const startTime = Date.now();
     const timer = setInterval(() => {
       const elapsed = Date.now() - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const current = Math.floor(start + (end - start) * easeOutQuart);
-      setCounts(prev => ({
+      setCounts((prev) => ({
         ...prev,
-        [key]: current
+        [key]: current,
       }));
       if (progress >= 1) clearInterval(timer);
     }, 16);
   };
 
-  // Trigger animation when section is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -99,11 +100,11 @@ const StatsSection = () => {
             const IconComponent = stat.icon;
             return (
               <div
-                key={index}
+                key={stat.key}
                 className="group text-center transform hover:scale-105 transition-all duration-300"
                 style={{
                   animationDelay: `${index * 0.2}s`,
-                  animation: isVisible ? 'fadeInUp 0.8s ease-out forwards' : 'none'
+                  animation: isVisible ? 'fadeInUp 0.8s ease-out forwards' : 'none',
                 }}
               >
                 <div className="relative mb-6 flex justify-center">
@@ -114,7 +115,7 @@ const StatsSection = () => {
                     className="relative w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-shadow duration-300"
                     style={{
                       clipPath:
-                        'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)'
+                        'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)',
                     }}
                   >
                     <IconComponent className="w-8 h-8 text-purple-600 group-hover:text-blue-600 transition-colors duration-300" />

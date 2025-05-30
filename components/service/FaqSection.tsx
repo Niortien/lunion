@@ -115,7 +115,7 @@ export default function FAQSection() {
              Notre équipe est là pour vous aider à répondre à toutes vos questions supplémentaires.
             </p>
             <Link href={'/contact'} className="bg-white text-purple-600 px-8 py-3 rounded-2xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-              Contacter l'assistance
+              Contacter l&apos assistance
             </Link>
           </div>
         </div>

@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, ArrowUp, ChevronLeft, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
+
 import Link from 'next/link';
 
 export default function Hero() {
@@ -56,7 +56,7 @@ export default function Hero() {
     setIsAutoPlaying(false);
   };
 
-  const goToSlide = (index) => {
+  const goToSlide = (index:number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };

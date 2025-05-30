@@ -17,7 +17,7 @@ const Footer = () => {
            <Image src={logo} alt={"logo-footer"} className="w-36 h-14 object-cover rounded" />
           </h3>
           <p className="text-gray-400 text-sm mt-4">
-          Bienvenue chez Lunion Lab, votre partenaire de confiance pour la transformation numérique basée à Abidjan. Spécialisée dans l'innovation numérique, notre start-up est dédiée à offrir des solutions sur mesure aux entreprises,
+          Bienvenue chez Lunion Lab, votre partenaire de confiance pour la transformation numérique basée à Abidjan. Spécialisée dans l`&apos; innovation numérique, notre start-up est dédiée à offrir des solutions sur mesure aux entreprises,
            les aidant à prospérer dans un monde de plus en plus numérisé.
           </p>
           <div className="flex gap-4 mt-6">
@@ -88,7 +88,7 @@ const SectionTitle = ({ title }: { title: string }) => (
   </h3>
 );
 
-const PostPreview = ({ image, title, date }: { image: string; title: string; date: string }) => (
+const PostPreview = ({  title, date }: { image: string; title: string; date: string }) => (
   <div className="flex gap-4">
     <Image src={logo} alt={title} className="w-36 h-10 object-cover rounded" />
     <div>
