@@ -1,11 +1,11 @@
 "use client"
 import React, { useState } from 'react';
-import { Calendar, User, Tag, ArrowRight, Clock, Heart, MessageCircle, Share2 } from 'lucide-react';
+import { Calendar, User, ArrowRight, Clock, Heart, MessageCircle, Share2 } from 'lucide-react';
 
 export default function BlogComponent() {
   const [likedPosts, setLikedPosts] = useState(new Set());
 
-  const toggleLike = (postId) => {
+  const toggleLike = (postId:number) => {
     const newLikedPosts = new Set(likedPosts);
     if (newLikedPosts.has(postId)) {
       newLikedPosts.delete(postId);
@@ -119,7 +119,7 @@ export default function BlogComponent() {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Découvrez nos derniers articles sur le design, le développement web, 
-            le marketing digital et les innovations technologiques qui façonnent l'avenir.
+            le marketing digital et les innovations technologiques qui façonnent l&apos;avenir.
           </p>
         </div>
       </div>
