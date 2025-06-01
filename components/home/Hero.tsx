@@ -69,6 +69,7 @@ export default function Hero() {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   
+  
 }}  >
       {/* Geometric Background Elements */}
       <div className="absolute inset-0">

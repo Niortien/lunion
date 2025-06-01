@@ -1,17 +1,17 @@
 // components/SectionBanner.tsx
 import Image from 'next/image';
-import bannerBg from '@/public/assets/images/Développement web.jpg'; // remplace par ton image
+import bannerBg from '@/public/assets/images/service1.jpg'; 
 
 export default function SectionBanner() {
   return (
-    <div className="relative h-[300px] md:h-[400px] flex items-center justify-center text-white text-center overflow-hidden">
+    <div className="relative h-[300px] md:h-[400px] flex items-center justify-center text-white text-center  overflow-hidden">
       {/* Background image */}
       <Image
         src={bannerBg}
         alt={`Banner`}
         layout="fill"
         objectFit="cover"
-        className="z-0 brightness-50"
+        className="z-0 brightness-60"
         priority
       />
 

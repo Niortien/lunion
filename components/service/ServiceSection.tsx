@@ -1,5 +1,6 @@
 import React from 'react';
 import { Code, Megaphone, ArrowRight,GraduationCap,TvMinimalPlay,QrCode } from 'lucide-react';
+import Link from 'next/link';
 
 const ServiceServices = () => {
   const services = [
@@ -20,10 +21,10 @@ const ServiceServices = () => {
       description: "Créez des supports visuels attrayants pour atteindre vos objectifs.",
       icon: TvMinimalPlay,
       bgColor: "bg-gray-100",
-      textColor: "text-white",
-      iconBg: "bg-white/20",
-      iconColor: "text-white",
-      isHighlighted: true
+      textColor: "text-gray-800",
+      iconBg: "bg-purple-100",
+      iconColor: "text-purple-600",
+      isHighlighted: false
     },
    
     {
@@ -75,7 +76,7 @@ const ServiceServices = () => {
             return (
               <div
                 key={service.id}
-                className={`relative ${service.bgColor} rounded-3xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl group overflow-hidden hover:bg-gradient-to-br from-purple-500 to-purple-600`}
+                className={`relative ${service.bgColor} rounded-3xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl group overflow-hidden hover:bg-gradient-to-br from-purple-500 to-purple-600 shadow-2xl`}
               >
                 {/* Background decoration */}
                 <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-white/10 rounded-full"></div>
@@ -87,7 +88,7 @@ const ServiceServices = () => {
                 </div>
 
                 {/* Icon container */}
-                <div className={`w-16 h-16 ${service.iconBg} rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 ${service.iconBg} rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-100`}>
                   <IconComponent className={`w-8 h-8 ${service.iconColor}`} />
                 </div>
 
@@ -102,14 +103,14 @@ const ServiceServices = () => {
                   </p>
 
                   {/* Read more button */}
-                  <button className={`inline-flex items-center gap-2 px-6 py-3 ${
+                  <Link href={'/service'} className={`inline-flex items-center gap-2 px-6 py-3 ${
                     service.isHighlighted
                       ? 'bg-white text-purple-600 hover:bg-gray-100'
                       : 'bg-purple-100 text-purple-600 hover:bg-purple-200'
                   } rounded-xl font-semibold transition-all duration-300 group-hover:gap-4`}>
                     READ MORE
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             );

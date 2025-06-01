@@ -3,7 +3,7 @@ import logo from "../../public/assets/images/logo.png"
 import Image from 'next/image';
 export default function FooterBanner() {
   return (
-    <div className="bg-slate-800 text-white py-4 px-6 relative overflow-hidden">
+    <div className="bg-slate-800 text-white py-4 px-6 relative overflow-hidden mt-8">
       {/* Diagonal purple accent */}
       <div className="absolute left-0 top-0 bottom-0 w-80 bg-gradient-to-r from-purple-600 to-purple-500 transform -skew-x-12 -translate-x-20"></div>
       
